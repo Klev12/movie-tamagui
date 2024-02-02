@@ -1,100 +1,89 @@
-import { Github, Twitter } from "@tamagui/lucide-icons";
-import { Link, useRouter } from "expo-router";
-import { Image } from 'tamagui'
+import { useRouter } from "expo-router";
 import {
-  Button,
+  Image,
   H1,
-  ListItem,
+  Button,
   Paragraph,
   Separator,
   YGroup,
-  YStack
+  YStack,
 } from "tamagui";
 
 import { MySafeAreaView } from "../components/MySafeAreaView";
 import { MyStack } from "../components/MyStack";
+import {ImageBackground, StyleSheet} from 'react-native';
+import { white } from "../utils/colors";
 
 export default function Home() {
   const router = useRouter();
 
   return (
     <MySafeAreaView>
+      <ImageBackground
+      source={require('../assets/capitan-america.jpg')}
+      style={styles.background}
+      >
       <MyStack>
         <YStack
           space="$4"
           maxWidth={600}
+          style={styles.textContainer}
         >
-          <H1 textAlign="center">Capitan America</H1>
-          <Paragraph textAlign="center">
-            Here&apos;s a basic starter to show navigating from one screen to
-            another.
+          <H1 style={styles.H1}>Capitan America</H1>
+          <Paragraph textAlign="center" color="white">
+            Steve Rogers "Capitan America", intenta salvar el mundo peleando xd
           </Paragraph>
-          <Image
-        source={{
-          uri: require("../assets/fondo.jpg"),
-          width: 200,
-          height: 200,
-        }}
-        />
         </YStack>
-        <YStack space="$2.5">
+
+        <YStack
+          space="$2.5"
+          style={styles.buttonContainer}
+        >
           <Button onPress={() => router.push("/users/testuser")}>
-            Go to user page
+            Go to a film
           </Button>
           <Button onPress={() => router.push("/tabs")}>Go to tabs page</Button>
         </YStack>
 
-        <YStack space="$5">
+        <YStack
+          space="$5"
+          style={styles.groupContainer}
+        >
           <YGroup
             bordered
             separator={<Separator />}
             theme="green"
           >
-            <YGroup.Item>
-              <Link
-                asChild
-                href="https://twitter.com/natebirdman"
-                target="_blank"
-              >
-                <ListItem
-                  hoverTheme
-                  title="Nate"
-                  pressTheme
-                  icon={Twitter}
-                />
-              </Link>
-            </YGroup.Item>
-            <YGroup.Item>
-              <Link
-                asChild
-                href="https://github.com/tamagui/tamagui"
-                target="_blank"
-              >
-                <ListItem
-                  hoverTheme
-                  pressTheme
-                  title="Tamagui"
-                  icon={Github}
-                />
-              </Link>
-            </YGroup.Item>
-            <YGroup.Item>
-              <Link
-                asChild
-                href="https://github.com/ivopr/tamagui-expo"
-                target="_blank"
-              >
-                <ListItem
-                  hoverTheme
-                  pressTheme
-                  title="This Template"
-                  icon={Github}
-                />
-              </Link>
-            </YGroup.Item>
+            {}
           </YGroup>
         </YStack>
       </MyStack>
+      </ImageBackground>
     </MySafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  H1:{
+    color:white,
+    paddingBottom:10,
+      
+  },
+  textContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    alignItems: 'center',
+  },
+  groupContainer: {
+    alignItems: 'center',
+  },
+  background:{
+    flex :1,
+    resizeMode:'cover',
+    justifyContent:'center',
+    alignItems:'center'
+  }
+});
