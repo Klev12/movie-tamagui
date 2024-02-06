@@ -1,6 +1,5 @@
 import { useRouter } from "expo-router";
 import {
-  Image,
   H1,
   Button,
   Paragraph,
@@ -11,8 +10,9 @@ import {
 
 import { MySafeAreaView } from "../components/MySafeAreaView";
 import { MyStack } from "../components/MyStack";
-import {ImageBackground, StyleSheet} from 'react-native';
+import {ImageBackground, ImageBackgroundBase, StyleSheet} from 'react-native';
 import { white } from "../utils/colors";
+import { Star } from '@tamagui/lucide-icons'
 
 export default function Home() {
   const router = useRouter();
@@ -42,7 +42,7 @@ export default function Home() {
           <Button onPress={() => router.push("/users/testuser")}>
             Go to a film
           </Button>
-          <Button onPress={() => router.push("/tabs")}>Go to tabs page</Button>
+          <Button icon={Star} onPress={() => router.push("/tabs")}>Go to tabs page</Button>
         </YStack>
 
         <YStack
