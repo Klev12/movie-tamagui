@@ -2,7 +2,6 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import { Button, H6 } from "tamagui";
 
-import DialogDemo from "../../components/DialogDemo";
 import { MyStack } from "../../components/MyStack";
 import SelectDemo from "../../components/SelectDemo";
 import SpinnerDemo from "../../components/SpinnerDemo";

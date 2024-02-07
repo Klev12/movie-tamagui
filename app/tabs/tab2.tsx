@@ -1,14 +1,14 @@
-import { H2,Text } from "tamagui";
-
 import { MyStack } from "../../components/MyStack";
-import Card1 from "../../components/Card";
+import CardScene from "../../components/CardScene";
+import {H2, H3} from "tamagui";
 
 export default function Tab2() {
   return (
-    <MyStack style={{backgroundColor:'#413EF1'}}>
+    <MyStack style={{ backgroundColor: "white" }}>
       <H2>DASHBOARD</H2>
-      <Text>FILMS</Text>
-      <Card1/>
+      <H3>SCENES</H3>
+      <CardScene/>
+      
     </MyStack>
   );
-}
+};

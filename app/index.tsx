@@ -39,9 +39,6 @@ export default function Home() {
           space="$2.5"
           style={styles.buttonContainer}
         >
-          <Button onPress={() => router.push("/users/testuser")}>
-            Go to a film
-          </Button>
           <Button icon={Star} onPress={() => router.push("/tabs")}>Go to tabs page</Button>
         </YStack>
 
@@ -76,6 +73,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     alignItems: 'center',
+    paddingBottom:250
   },
   groupContainer: {
     alignItems: 'center',

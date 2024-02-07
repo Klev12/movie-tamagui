@@ -5,32 +5,32 @@ import { Button } from 'tamagui'
 import { Pencil, Trash } from '@tamagui/lucide-icons'
 import { router } from 'expo-router';
 
-const Card1 = () => {
+const CardScene = () => {
 
   return (
     <View style={styles.container}>
-      <Card style={styles.card} onPress={()=>router.push('/tabs/tab2')}>
-        <Text style={styles.title}>FILM 1</Text>
+      <Card style={styles.card} onPress={()=> router.push('/tabs/tab3')}>
+        <Text style={styles.title}>SCENE 1</Text>
         <Text style={styles.paragraph}>DIRECTOR</Text>
         <Text style={styles.paragraph}>TIME</Text>
         <View style={styles.buttonContainer}>
-          <Button icon={Pencil} style={styles.icon} onPress={()=>router.push('/Films')}></Button>
+          <Button icon={Pencil} style={styles.icon} onPress={()=>router.push('/Scenes')}></Button>
           <Button icon={Trash} style={styles.icon}></Button>
         </View>
       </Card>
 
       <Card style={styles.card}>
-        <Text style={styles.title}>FILM 2</Text>
+        <Text style={styles.title}>SCENE 2</Text>
         <Text style={styles.paragraph}>DIRECTOR</Text>
         <Text style={styles.paragraph}>Time</Text>
         <View style={styles.buttonContainer}>
-          <Button icon={Pencil} style={styles.icon} onPress={() => router.push('/tabs/tab2')}></Button>
+          <Button icon={Pencil} style={styles.icon}></Button>
           <Button icon={Trash} style={styles.icon}></Button>
         </View>
       </Card>
 
       <Card style={styles.card}>
-        <Text style={styles.title}>FILM 3</Text>
+        <Text style={styles.title}>SCENE 3</Text>
         <Text style={styles.paragraph}>DIRECTOR</Text>
         <Text style={styles.paragraph}>TIME</Text>
         <View style={styles.buttonContainer}>
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Card1;
+export default CardScene;
