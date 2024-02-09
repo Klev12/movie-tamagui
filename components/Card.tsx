@@ -5,8 +5,7 @@ import { Button } from 'tamagui'
 import { Pencil, Trash } from '@tamagui/lucide-icons'
 import { router } from 'expo-router';
 
-const Card1 = () => {
-
+const Card1 = () => {  
   return (
     <View style={styles.container}>
       <Card style={styles.card} onPress={()=>router.push('/tabs/tab2')}>
@@ -24,7 +23,7 @@ const Card1 = () => {
         <Text style={styles.paragraph}>DIRECTOR</Text>
         <Text style={styles.paragraph}>Time</Text>
         <View style={styles.buttonContainer}>
-          <Button icon={Pencil} style={styles.icon} onPress={() => router.push('/tabs/tab2')}></Button>
+          <Button icon={Pencil} style={styles.icon} onPress={() => router.push('/Films')}></Button>
           <Button icon={Trash} style={styles.icon}></Button>
         </View>
       </Card>
@@ -47,7 +46,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 10,
-    backgroundColor: '#7E0303'
+    backgroundColor: '#541219',
+    borderRadius:25
   },
   card: {
     marginBottom: 10,
@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
   icon:{
     width: 50, 
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor:'transparent'
   },
   buttonContainer: {
     flexDirection: 'row', 

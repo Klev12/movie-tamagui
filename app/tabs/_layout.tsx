@@ -47,7 +47,7 @@ export default function Layout() {
             return (
               <Button
                 ml="$2.5"
-                onPress={() => router.push("/")}
+                onPress={() => router.push("/tabs/tab1")}
               >
                 <MaterialCommunityIcons name="arrow-left" />
               </Button>
@@ -73,7 +73,7 @@ export default function Layout() {
             return (
               <Button
                 ml="$2.5"
-                onPress={() => router.push("/")}
+                onPress={() => router.push("/tabs/tab2")}
               >
                 <MaterialCommunityIcons name="arrow-left" />
               </Button>

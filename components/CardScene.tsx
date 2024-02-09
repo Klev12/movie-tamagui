@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 10,
-    backgroundColor: '#7E0303'
+    backgroundColor: '#541219',
+    borderRadius:25
   },
   card: {
     marginBottom: 10,
@@ -65,7 +66,8 @@ const styles = StyleSheet.create({
   icon:{
     width: 50, 
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor:'transparent'
   },
   buttonContainer: {
     flexDirection: 'row', 

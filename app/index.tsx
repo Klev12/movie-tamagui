@@ -39,7 +39,7 @@ export default function Home() {
           space="$2.5"
           style={styles.buttonContainer}
         >
-          <Button icon={Star} onPress={() => router.push("/tabs")}>Go to tabs page</Button>
+          <Button icon={Star} onPress={() => router.push("/tabs")}>Begin</Button>
         </YStack>
 
         <YStack
