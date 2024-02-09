@@ -13,8 +13,8 @@ const Card1 = () => {
         <Text style={styles.paragraph}>DIRECTOR</Text>
         <Text style={styles.paragraph}>TIME</Text>
         <View style={styles.buttonContainer}>
-          <Button icon={Pencil} style={styles.icon} onPress={()=>router.push('/Films')}></Button>
-          <Button icon={Trash} style={styles.icon}></Button>
+          <Button icon={<Pencil size="$1"/>} style={styles.icon} onPress={()=>router.push('/Films')}></Button>
+          <Button icon={<Trash size="$1"/>} style={styles.icon}></Button>
         </View>
       </Card>
 
@@ -23,8 +23,8 @@ const Card1 = () => {
         <Text style={styles.paragraph}>DIRECTOR</Text>
         <Text style={styles.paragraph}>Time</Text>
         <View style={styles.buttonContainer}>
-          <Button icon={Pencil} style={styles.icon} onPress={() => router.push('/Films')}></Button>
-          <Button icon={Trash} style={styles.icon}></Button>
+          <Button icon={<Pencil size="$1" />} style={styles.icon} onPress={() => router.push('/Films')}></Button>
+          <Button icon={<Trash size="$1"/>} style={styles.icon}></Button>
         </View>
       </Card>
 
@@ -33,8 +33,8 @@ const Card1 = () => {
         <Text style={styles.paragraph}>DIRECTOR</Text>
         <Text style={styles.paragraph}>TIME</Text>
         <View style={styles.buttonContainer}>
-          <Button icon={Pencil} style={styles.icon}></Button>
-          <Button icon={Trash} style={styles.icon}></Button>
+          <Button icon={<Pencil size="$1"/>} style={styles.icon}></Button>
+          <Button icon={<Trash size="$1"/>} style={styles.icon}></Button>
         </View>
       </Card>
     </View>

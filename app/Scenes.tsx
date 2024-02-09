@@ -10,18 +10,12 @@ import { MySafeAreaView } from '../components/MySafeAreaView';
 export default function Scenes() {
   return (
     <MySafeAreaView>
-      <MyStack style={{backgroundColor:'#4A6786'}}>
-        <View style={{ position: 'relative' }}>
-          <Button icon={<X size="$4"/>} style={{ position: 'absolute', top: -10, right: -20, backgroundColor: 'transparent', color: 'white' }} onPress={()=> router.push('/tabs/tab2')} />
-          <H1 style={{ marginBottom: 20, marginTop: 30, fontSize: 50, color: 'white' }}>SCENES</H1>
-        </View>
-        <Image
-          source={require('../assets/scenes.png')}
-          style={{ width: 200, height: 200, marginBottom: 50, marginTop: 20 }}
-        />
-        <LabelScene />
-        <Button icon={<Star size="$2"/>}> Create Scene</Button>
-      </MyStack>
+    <MyStack style={{backgroundColor:'#4A6786'}}>
+    <Button icon={<X size="$4"/>} style={{ position: 'absolute', top: 10, right: -20, backgroundColor: 'transparent', color: 'white' }} onPress={()=> router.push('/tabs/tab2')} />
+        <H1 style={{ marginTop: 10, fontSize: 50, color: 'white',position:'absolute' }}>SCENES</H1>
+      <LabelScene marginTop={-200}/>
+      <Button icon={<Star size="$2" />} style={{ marginBottom: 30, borderColor: 'red', backgroundColor: 'white', color: 'black' }} onPress={()=> router.push('/tabs/tab2')}> Create Scene</Button>
+    </MyStack>
     </MySafeAreaView>
-  );
+);
 }
